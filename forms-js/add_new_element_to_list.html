@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Add new element to list</title>
+</head>
+
+<body>
+    <ul id="my_list">
+        <li>A list item</li>
+        <li>Another list item</li>
+    </ul>
+
+    <!-- JS function called as value to an event listener attribute -->
+    <button onclick="addToList()">Add items to this list</button>
+
+    <script>
+        let newItems = 1;       // initial value of new item
+
+        function addToList() {
+            // find the list reference in the document
+            let my_list_element = document.getElementById("my_list");
+            
+            // create a new list item
+            let new_list_item = document.createElement("li");
+            
+            // the li element text after clicking the add button
+            new_list_item.innerHTML = "New item " + newItems;
+
+            // increment the number of list items
+            newItems++;
+
+            // add new list item to existing list
+            my_list_element.appendChild(new_list_item);
+        }
+    </script>
+</body>
+
+</html>

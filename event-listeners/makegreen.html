@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>onclick event: Make Green</title>
+</head>
+
+<body>
+    <h1>The text on this page should be green</h1>
+
+    <p>This text would look better green.</p>
+    <p>This text would also look better green.</p>
+
+    <!-- function called using an attribute from html element -->
+    <button onclick="green()">Click to turn text green</button>
+
+    <script>
+        // changes all paragraph text to green color
+        function green() {
+            let allP = document.querySelectorAll("p");
+
+            for (let p = 0; p < allP.length; p++) 
+            {
+                allP[p].style.color = "green";
+            }
+        }
+    </script>
+</body>
+
+</html>

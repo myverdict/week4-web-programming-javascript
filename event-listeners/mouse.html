@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse events</title>
+</head>
+
+<body>
+    <!-- HTML here -->
+    <p id="mouse-me">Move your mouse here!</p>
+    
+
+    <!-- JavaScript here -->
+    <script>
+        // find the mouse-me element on the document/webpage
+        let message = document.querySelector('#mouse-me');
+
+        // add a mouseover event listener to the mouse-me element
+        message.addEventListener('mouseover', function() {
+            message.innerHTML = `Your mouse is on this message!`;
+        });
+
+        // add a mouseout event listener to the mouse-me element
+        message.addEventListener('mouseout', function() {
+            message.innerHTML = `Your mouse is NOT on the message!`;
+        });
+    </script>
+</body>
+
+</html>

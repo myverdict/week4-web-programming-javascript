@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>JS: Keycode</title>
+</head>
+
+<body>
+	<h1>Please press the enter key</h1>
+	<p id="enter-pressed"></p>
+
+	<script>
+		// find the paragraph element on the document
+		let para = document.querySelector('#enter-pressed')
+
+		// add event parameter to the function
+		document.addEventListener('keyup', function (event) {
+			para.innerHTML = 'keyup event fired. ';
+
+			if (event.key === 'Enter') {
+				para.innerHTML += 'You pressed "enter", detected from key property.';
+			}
+			else {
+				para.innerHTML += `You pressed "${event.key}", detected from key property.`;
+			}
+
+			// do whatever to handle the event here
+		})
+
+		// add event parameter to the function
+		document.addEventListener('keydown', function (event) {
+			para.innerHTML = 'keydown event fired. ';
+			para.innerHTML += `You pressed "${event.key}", detected from key property.`;
+
+			// do whatever to handle the event here
+		})
+
+		// add event parameter to the function
+		document.addEventListener('keypress', function (event) {
+			para.innerHTML = 'keypress event fired. ';
+
+			if (event.key === 'Enter') {
+				para.innerHTML += 'You pressed "enter", detected from key property.';
+			}
+			else {
+				para.innerHTML += `You pressed "${event.key}", detected from key property.`;
+			}
+
+			// do whatever to handle the event here
+		})
+	</script>
+</body>
+
+</html>

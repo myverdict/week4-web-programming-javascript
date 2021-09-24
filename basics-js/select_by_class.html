@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select by class</title>
+</head>
+
+<body>
+    <h1>Programming Languages</h1>
+    <p>
+        <span class="language-name">Java</span> is used by 
+        Google, Amazon and Netflix.
+    </p>
+    
+    <p>
+        Created by Microsoft, <span class="language-name">C#</span> 
+        is a very popular language.
+    </p>
+    
+    <p>
+        <span class="language-name">JavaScript</span> is probably the 
+        most widely used language in the world.
+    </p>
+
+    <h2>Summary of languages on this page</h2>
+    <ul id="language-list">
+        <!-- 
+            Build this with JavaScript. 
+            Will contain a list of the names Java, C# and JavaScript.
+        -->
+    </ul>
+
+
+    <script>
+        // All of the elements with class="language-name"
+        var languageNameSpans = document.querySelectorAll('.language-name');
+
+        // Find the language-list ul element using it's id 
+        var languageList = document.querySelector('#language-list');
+
+        // Build the list, for each span element 
+        languageNameSpans.forEach(function(eachSpan) {
+            // get the text from the span
+            let langName = eachSpan.innerHTML;   
+            
+            // create a new li element 
+            let listItem = document.createElement('li');    
+
+            // set the new li element's innerHTML to the span's text
+            listItem.innerHTML = langName;                      
+
+            // add/append the new li element to the languageList ul element
+            languageList.appendChild(listItem);             
+        })
+    </script>
+</body>
+
+</html>
