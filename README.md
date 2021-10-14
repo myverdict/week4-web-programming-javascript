@@ -4,7 +4,7 @@ JavaScript Introduction: basic syntax, events, forms, etc
 
 <h1>WEB PROGRAMMING</h1>
 
-<h2>Week 4 Labs: JavaScript (JS) Introduction</h2>
+<h2>Week 4 Labs: JavaScript (JS) Introduction: Events</h2>
 
 <ul>
   <li>Template for inline JS</li>
