@@ -1,3 +1,8 @@
+body {
+  line-height: 25pt;
+  font-size: large;
+}
+
 .mono {
   font-family: "Courier New", Courier, monospace;
 }
