@@ -22,6 +22,8 @@ JavaScript Introduction: basic syntax, events, forms, etc
   Click here to view live!
 </a>
 
+<hr />
+
 <p>
   <i>
     ITEC 2560-60: Web Client and Server Programming
