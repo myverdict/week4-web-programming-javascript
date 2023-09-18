@@ -1,44 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Display Screen Width</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <h1>Display Screen Width with JavaScript</h1>
 
-    <br><br>
+    <br /><br />
 
     <!-- Will display the screen width here -->
     <h3 id="screen-width"></h3>
 
-    <!-- 
-        JavaScript to display the browser screen width, and update it as the
-        window is resized.
+    <!--
+        JavaScript to display the browser screen width, and update it as the window is resized.
     -->
     <script>
-        // Define a function
-        function displayWidth() {
-            // What is the current document/window width & store in a variable
-            let width = document.body.scrollWidth;
+      // Define a function
+      function displayWidth() {
+        // What is the current document/window width & store in a variable
+        let width = document.body.scrollWidth;
 
-            // Find the display element in the body/document
-            let widthDisplayEl = document.querySelector('#screen-width');
+        // Find the display element in the body/document
+        let widthDisplayEl = document.querySelector("#screen-width");
 
-            // Modify the inner HTML to the current/resized window width
-            widthDisplayEl.innerHTML = `Window width = ${width} pixels`;
-        }
+        // Modify the inner HTML to the current/resized window width
+        widthDisplayEl.innerHTML = `Window width = ${width} pixels`;
+      }
 
-        displayWidth();     // Call the function to display initial window size
+      displayWidth(); // Call the function to display initial window size
 
-        // Add resize event listener to the window object to update when window is resized.
-        // The displayWidth argument here is a function object/definition
-        window.addEventListener('resize', displayWidth);
+      // Add resize event listener to the window object to update when window is resized.
+      // The displayWidth argument here is a function object/definition
+      window.addEventListener("resize", displayWidth);
     </script>
-</body>
-
+  </body>
 </html>

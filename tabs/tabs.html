@@ -1,25 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tabbed Content</title>
-    
-    <!-- CSS link here -->
-    <link rel="stylesheet" href="style.css" type="text/css">
-</head>
 
-<body>
+    <!-- CSS link here -->
+    <link rel="stylesheet" href="style.css" type="text/css" />
+  </head>
+
+  <body>
     <!-- HTML here -->
     <h1>Favorite Foods</h1>
 
     <!-- Tab buttons -->
     <div id="tabs">
-        <button data-content-id="pizza" class="tab-button">Pizza</button>
-        <button data-content-id="cheesecake" class="tab-button">Cheesecake</button>
-        <button data-content-id="sushi" class="tab-button">Sushi</button>
+      <button data-content-id="pizza" class="tab-button">Pizza</button>
+      <button data-content-id="cheesecake" class="tab-button">Cheesecake</button>
+      <button data-content-id="sushi" class="tab-button">Sushi</button>
     </div>
 
     <!-- Content associated with each tab button -->
@@ -27,60 +26,58 @@
     <div id="cheesecake" class="tab-content">Cheesecake is delicious</div>
     <div id="sushi" class="tab-content">Sushi is amazing</div>
 
-
     <!-- JavaScript here -->
     <script>
-        // find all button elements on the document/webpage
-        // returns an array
-        let buttons = document.querySelectorAll('.tab-button');
+      // find all button elements on the document/webpage
+      // returns an array
+      let buttons = document.querySelectorAll(".tab-button");
 
-        // find all tab content div elements on the document/webpage
-        // returns an array
-        let tabContents = document.querySelectorAll('.tab-content');
+      // find all tab content div elements on the document/webpage
+      // returns an array
+      let tabContents = document.querySelectorAll(".tab-content");
 
-        // initially hide all the tab content divs
-        tabContents.forEach(function(contentDivEl) {
-            contentDivEl.style.display = 'none';
-        });
+      // initially hide all the tab content divs
+      tabContents.forEach(function (contentDivEl) {
+        contentDivEl.style.display = "none";
+      });
 
-        // initially display first button content
-        tabContents[0].style.display = 'block';
+      // initially display first button content
+      tabContents[0].style.display = "block";
 
-        // set the class active to the first button
-        buttons[0].classList.add('active');
+      // set the class active to the first button
+      buttons[0].classList.add("active");
 
-        // add event listeners to all buttons
-        buttons.forEach(function(button) {
-            // add a click event listener to each button
-            button.addEventListener('click', function() {
-                // hide content for unclicked buttons
-                tabContents.forEach(function(contentDivEl) {
-                    contentDivEl.style.display = 'none';
-                });
+      // add event listeners to all buttons
+      buttons.forEach(function (button) {
+        // add a click event listener to each button
+        button.addEventListener("click", function () {
+          // hide content for unclicked buttons
+          tabContents.forEach(function (contentDivEl) {
+            contentDivEl.style.display = "none";
+          });
 
-                // remove active classes for unclicked buttons, if any
-                buttons.forEach(function(button) {
-                    button.classList.remove('active');
-                });
+          // remove active classes for unclicked buttons, if any
+          buttons.forEach(function (button) {
+            button.classList.remove("active");
+          });
 
-                // this - element that generated the event / the button that was clicked
-                // add the class active to the clicked button
-                this.classList.add('active');
+          // this - element that generated the event / the button that was clicked
+          // add the class active to the clicked button
+          this.classList.add("active");
 
-                // show the tab-content div related to the button that was clicked
-                // get the data-content-id value of the clicked button
-                let contentId = this.getAttribute('data-content-id');
-                console.log(contentId);                 // debug, example: pizza
+          // show the tab-content div related to the button that was clicked
+          // get the data-content-id value of the clicked button
+          let contentId = this.getAttribute("data-content-id");
+          console.log(contentId); // debug, example: pizza
 
-                // find the div element id for the tab-content related to the clicked button
-                let tabContent = document.querySelector('#' + contentId);   // example: #pizza
-                console.log(tabContent);
+          // find the div element id for the tab-content related to the clicked button
+          let tabContent = document.querySelector("#" + contentId); // example: #pizza
+          console.log(tabContent);
 
-                // display content related to the clicked button
-                tabContent.style.display = 'block';
-            }); // end of event listener
-        });     // end of loop 
+          // display content related to the clicked button
+          tabContent.style.display = "block";
+        }); // end of event listener
+      }); // end of loop
     </script>
-</body>
-
+  </body>
 </html>

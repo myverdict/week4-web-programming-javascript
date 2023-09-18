@@ -1,47 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mouseover counts</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- HTML here -->
     <p id="mouse-me">Move your mouse here!</p>
-    
+
     <!-- JavaScript here -->
     <script>
-        // initial mouse count when page loads
-        let mouseCount = 0;
+      // initial mouse count when page loads
+      let mouseCount = 0;
 
-        // find the mouse-me element on the document/webpage
-        let message = document.querySelector('#mouse-me');
+      // find the mouse-me element on the document/webpage
+      let message = document.querySelector("#mouse-me");
 
-        // add a mouseover event listener to the mouse-me element
-        message.addEventListener('mouseover', function() {
-            // increase mouseover count by 1 each time
-            mouseCount++;       // mouseCount = mouseCount + 1;
+      // add a mouseover event listener to the mouse-me element
+      message.addEventListener("mouseover", function () {
+        // increase mouseover count by 1 each time
+        mouseCount++; // mouseCount = mouseCount + 1;
 
-            // change the innerHTML of message when mouseover
-            if(mouseCount == 1) 
-            {
-                message.innerHTML = 'Mouse has been here ' + mouseCount + ' time.';
-            } 
-            else 
-            {
-                message.innerHTML = 'Mouse has been here ' + mouseCount + ' times.';
-            }
-        });
+        // change the innerHTML of message when mouseover
+        if (mouseCount == 1) {
+          message.innerHTML = "Mouse has been here " + mouseCount + " time.";
+        } else {
+          message.innerHTML = "Mouse has been here " + mouseCount + " times.";
+        }
+      });
 
-        // add a mouseout event listener to the mouse-me element
-        message.addEventListener('mouseout', function() {
-            // change the innerHTML of message when mouseout
-            message.innerHTML = `Your mouse is NOT on the message!`;
-        });
+      // add a mouseout event listener to the mouse-me element
+      message.addEventListener("mouseout", function () {
+        // change the innerHTML of message when mouseout
+        message.innerHTML = `Your mouse is NOT on the message!`;
+      });
     </script>
-</body>
-
+  </body>
 </html>

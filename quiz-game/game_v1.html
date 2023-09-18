@@ -2,15 +2,14 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz V1</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- HTML content here -->
     <p>What is the capital of Wisconsin?</p>
 
@@ -20,27 +19,25 @@
 
     <p id="result"></p>
 
-    
     <!-- JavaScript code here -->
     <script>
-        // If a general button element is found, the 1st button element will show
-        // let button = document.querySelector('button');
-        // console.log(button);                                     // debug
+      // If a general button element is found, the 1st button element will show
+      // let button = document.querySelector('button');
+      // console.log(button);                                     // debug
 
-        // Find the correct answer button on the document/web page
-        let correctAnswerButton = document.querySelector('#correct-answer');
+      // Find the correct answer button on the document/web page
+      let correctAnswerButton = document.querySelector("#correct-answer");
 
-        // Find the result element on the document/web page
-        let result = document.querySelector('#result');
+      // Find the result element on the document/web page
+      let result = document.querySelector("#result");
 
-        // add a click event listener to the correct answer button
-        correctAnswerButton.addEventListener('click', function() {
-            console.log(correctAnswerButton);                       // debug
+      // add a click event listener to the correct answer button
+      correctAnswerButton.addEventListener("click", function () {
+        console.log(correctAnswerButton); // debug
 
-            // Display a message for the correct answer in the result paragraph
-            result.innerHTML = `Correct answer!`;
-        });
-    </script>    
-</body>
-
+        // Display a message for the correct answer in the result paragraph
+        result.innerHTML = `Correct answer!`;
+      });
+    </script>
+  </body>
 </html>

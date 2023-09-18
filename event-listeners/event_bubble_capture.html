@@ -1,90 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Event bubbling vs capturing</title>
-
     <style>
-        div {
-            border: 1px black solid;
-            padding: 1em;
-        }
+      div {
+        border: 1px black solid;
+        padding: 1em;
+      }
     </style>
-</head>
+  </head>
 
-<body>
-    <!-- 'bubbling' (often the default), events are fired off beginning with the child element and then go up to the parent. -->
+  <body>
+    <!--
+        'bubbling' (often the default), events are fired off beginning with the
+        child element and then go up to the parent.
+    -->
     <h1>Event Bubbling</h1>
 
     <div id="container">
-        <button id="click-me">Click me!</button>
+      <button id="click-me">Click me!</button>
     </div>
 
-
-    <!-- 'capturing' means that events are fired off from the parent first, and then down to the child element. -->
+    <!--
+        'capturing' means that events are fired off from the parent first,
+        and then down to the child element.
+    -->
     <h1>Event Capturing</h1>
 
     <div id="container-2">
-        <button id="click-me-2">Click me!</button>
+      <button id="click-me-2">Click me!</button>
     </div>
 
-
     <script>
-        // EVENT BUBBLING
-        // element references from the event bubbling section
-        let button = document.querySelector('#click-me')
-        let container = document.querySelector('#container')
+      // EVENT BUBBLING
+      // element references from the event bubbling section
+      let button = document.querySelector("#click-me");
+      let container = document.querySelector("#container");
 
-        // default is bubbling - inner event fires first, then bubbles up to containing (parent) element
-        // default, isCapture argument is false.
-        button.addEventListener('click', function () {
-            alert('Button event!')
-            console.log("Event bubbling: child button event fired first");
-        })
+      // default is bubbling - inner event fires first, then bubbles up to containing (parent) element
+      // default, isCapture argument is false.
+      button.addEventListener("click", function () {
+        alert("Button event!");
+        console.log("Event bubbling: child button event fired first");
+      });
 
-        container.addEventListener('click', function () {
-            alert('Div event!')
-            console.log("Event bubbling: parent div event fired second");
-        }, false)
+      container.addEventListener("click", function () {
+          alert("Div event!");
+          console.log("Event bubbling: parent div event fired second");
+        },
+        false
+      );
 
+      // EVENT CAPTURING
+      // element references from the event capturing section
+      let button2 = document.querySelector("#click-me-2");
+      let container2 = document.querySelector("#container-2");
 
-        // EVENT CAPTURING
-        // element references from the event capturing section
-        let button2 = document.querySelector('#click-me-2')
-        let container2 = document.querySelector('#container-2')
+      // capturing - events are fired off from the parent first, and then down to the child element.
+      // Note isCapture argument, set to true
+      button2.addEventListener("click", function () {
+          alert("Button event!");
+          console.log("Event capturing: child button event fired second");
+        },
+        true
+      ); // <-- isCapture parameter
 
-        // capturing - events are fired off from the parent first, and then down to the child element.
-        // Note isCapture argument, set to true
-        button2.addEventListener('click', function () {
-            alert('Button event!')
-            console.log("Event capturing: child button event fired second");
-        }, true)   // <-- isCapture parameter 
-
-        container2.addEventListener('click', function () {
-            alert('Div event!')
-            console.log("Event capturing: parent div event fired first");
-        }, true)  // <-- isCapture parameter 
+      container2.addEventListener("click", function () {
+          alert("Div event!");
+          console.log("Event capturing: parent div event fired first");
+        },
+        true
+      ); // <-- isCapture parameter
     </script>
 
     <!--
-        When working with events in JavaScript you have the option of using 
-        'bubbling' or 'capturing' to define the order in which the event 
+        When working with events in JavaScript you have the option of using
+        'bubbling' or 'capturing' to define the order in which the event
         handlers fire off. In most cases, bubbling is default.
 
-        Typically you don't need to worry about capturing unless you need ultimate 
-        control over your event handlers. This concept is only relevant if you have 
+        Typically you don't need to worry about capturing unless you need ultimate
+        control over your event handlers. This concept is only relevant if you have
         a parent element and a child element which both have event listeners.
 
-        When using 'bubbling', events are fired off beginning with the child element 
+        When using 'bubbling', events are fired off beginning with the child element
         and then go up to the parent.
 
-        In contrast, 'capturing' means that events are fired off from the parent first, 
+        In contrast, 'capturing' means that events are fired off from the parent first,
         and then down to the child element.
 
         Note taken from YouTube video on "Bubbling vs Capturing in JavaScript | JavaScript Events Tutorial"
         https://www.youtube.com/watch?v=Q6HAJ6bz7bY
     -->
-</body>
-
+  </body>
 </html>

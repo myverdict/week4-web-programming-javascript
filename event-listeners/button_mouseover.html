@@ -1,34 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Button Mouseover</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- HTML content here -->
     <button>Click here!</button>
-    
+
     <script>
-        // JavaScript here
-        // First find the button element in the web page
-        let button = document.querySelector('button');
+      // JavaScript here
+      // First find the button element in the web page
+      let button = document.querySelector("button");
 
-        // Function definition
-        function showAlert() {
-            // Alert popup message
-            alert('You moved over the button!');
+      // Function definition
+      function showAlert() {
+        // Alert popup message
+        alert("You moved over the button!");
 
-            // Remove button
-            button.remove();
-        }
+        // Remove button
+        button.remove();
+      }
 
-        // Add an event listener to the button element
-        button.addEventListener('mouseover', showAlert);
+      // Add an event listener to the button element
+      button.addEventListener("mouseover", showAlert);
     </script>
-</body>
-
+  </body>
 </html>

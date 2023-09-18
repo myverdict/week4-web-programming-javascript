@@ -1,104 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Forms: create list</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- HTML here -->
     <div>
-        <div>
-            <label for="new-text">Enter some text to add to the list</label>
-    
-            <div>
-                <!-- Text input box -->
-                <input type="text" name="some-input" id="new-text">
+      <div>
+        <label for="new-text">Enter some text to add to the list</label>
 
-                <!-- Add button -->
-                <button id="add-text">Add</button>
-            </div>
-        </div>
-         
-        <!-- Empty unordered list -->
         <div>
-            <ul id="list-of-text"></ul>
-        </div>
+          <!-- Text input box -->
+          <input type="text" name="some-input" id="new-text" />
 
-        <!-- Clear button -->
-        <button id="clear-list">Clear</button>
+          <!-- Add button -->
+          <button id="add-text">Add</button>
+        </div>
+      </div>
+
+      <!-- Empty unordered list -->
+      <div>
+        <ul id="list-of-text"></ul>
+      </div>
+
+      <!-- Clear button -->
+      <button id="clear-list">Clear</button>
     </div>
-
 
     <!-- JavaScript here -->
     <script>
-        // Find the input text box, button and ul elements in the document/webpage
-        let textInput = document.querySelector('#new-text');
-        let addButton = document.querySelector('#add-text');
-        let clearButton = document.querySelector('#clear-list');
-        let textList = document.querySelector('#list-of-text');
+      // Find the input text box, button and ul elements in the document/webpage
+      let textInput = document.querySelector("#new-text");
+      let addButton = document.querySelector("#add-text");
+      let clearButton = document.querySelector("#clear-list");
+      let textList = document.querySelector("#list-of-text");
 
-        let itemsInList = 0;                // tracking number of list items
-        let maxListItems = 10;              // max items allowed
+      let itemsInList = 0; // tracking number of list items
+      let maxListItems = 10; // max items allowed
 
-        // using enter key to initiate the add button
-        document.addEventListener('keyup', function() {
-            // when the enter button on the keyboard is clicked
-            if (event.key == "Enter" || event.keyCode == 13) 
-            {
-                addButton.click();                                  // click add button
-            }
-        });
+      // using enter key to initiate the add button
+      document.addEventListener("keyup", function () {
+        // when the enter button on the keyboard is clicked
+        if (event.key == "Enter" || event.keyCode == 13) {
+          addButton.click(); // click add button
+        }
+      });
 
-        // Add a click event listener to the add button
-        addButton.addEventListener('click', function() {
-            // read text from the input box
-            let newText = textInput.value;
+      // Add a click event listener to the add button
+      addButton.addEventListener("click", function () {
+        // read text from the input box
+        let newText = textInput.value;
 
-            // Form validation 1: check the max number is not exceeded for the list
-            if (itemsInList >= maxListItems) 
-            {
-                textInput.value = '';                               // clear input box    
-                alert('No more elements can be added.');            // alert user
-                return;                                             // stop processing
-            }
+        // Form validation 1: check the max number is not exceeded for the list
+        if (itemsInList >= maxListItems) {
+          textInput.value = ""; // clear input box
+          alert("No more elements can be added."); // alert user
+          return; // stop processing
+        }
 
-            // Form validation 2: make sure user has entered 1-50 characters
-            // do not clear input box
-            if (newText.length == 0 || newText.length > 50) 
-            {
-                alert('Enter text: 1 - 50 characters long');
-                return;                                             // stop processing
-            }
+        // Form validation 2: make sure user has entered 1-50 characters
+        // do not clear input box
+        if (newText.length == 0 || newText.length > 50) {
+          alert("Enter text: 1 - 50 characters long");
+          return; // stop processing
+        }
 
-            // ask the document/webpage to create a new li element
-            let newListItem = document.createElement('li');
+        // ask the document/webpage to create a new li element
+        let newListItem = document.createElement("li");
 
-            // the li element text should be the text value from the input
-            newListItem.innerHTML = newText;
+        // the li element text should be the text value from the input
+        newListItem.innerHTML = newText;
 
-            // attach the li element to the ul element on the document according to the DOM
-            textList.appendChild(newListItem);
+        // attach the li element to the ul element on the document according to the DOM
+        textList.appendChild(newListItem);
 
-            // clear the text from the input box
-            textInput.value = '';
+        // clear the text from the input box
+        textInput.value = "";
 
-            // increase the number of items in the list
-            itemsInList++;
-        });
+        // increase the number of items in the list
+        itemsInList++;
+      });
 
-        // Add a click event listener to the clear button
-        clearButton.addEventListener('click', function() {
-            // Set the ul innerHTML to an empty string to clear list
-            textList.innerHTML = '';
+      // Add a click event listener to the clear button
+      clearButton.addEventListener("click", function () {
+        // Set the ul innerHTML to an empty string to clear list
+        textList.innerHTML = "";
 
-            // Reset the items in list to 0
-            itemsInList = 0;
-        });
+        // Reset the items in list to 0
+        itemsInList = 0;
+      });
     </script>
-</body>
-
+  </body>
 </html>

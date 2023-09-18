@@ -1,36 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Sounds</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- button for sound effect -->
     <button id="play-music">Click to play music</button>
 
     <p>
-        'Crazy' by Patrick Patrikios <br>
-        Free music from YouTube audio library
+      'Crazy' by Patrick Patrikios <br />
+      Free music from YouTube audio library
     </p>
 
-
     <script>
-        // Create a new Audio object
-        let audio = new Audio('crazy_music.mp3');
+      // Create a new Audio object
+      let audio = new Audio("crazy_music.mp3");
 
-        // find the button reference in the document
-        let soundButton = document.querySelector('#play-music');
+      // find the button reference in the document
+      let soundButton = document.querySelector("#play-music");
 
-        // add an event listener to the button on click to play the music
-        soundButton.addEventListener('click', function () {
-            audio.play();               // ask it to play
-        })
+      // add an event listener to the button on click to play the music
+      soundButton.addEventListener("click", function () {
+        audio.play(); // ask it to play
+      });
 
-        // More info on managing sounds, starting, stopping etc
-        // https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API
+      // More info on managing sounds, starting, stopping etc
+      // https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API
     </script>
-</body>
-
+  </body>
 </html>

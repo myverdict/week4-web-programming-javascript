@@ -1,55 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Mouse events: make purple</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <h1>My Web Page</h1>
     <p>Here's some text</p>
 
     <h1>Another header</h1>
-    <p>And some more text. Move the mouse over any header to see what happens to the text....</p>
+    <p>
+      And some more text. Move the mouse over any header to see what happens to the text....
+    </p>
 
     <script>
-        // This runs when the page loads.
-        let mouseOverColor = "purple";
-        let mouseLeftColor = "black";
+      // This runs when the page loads.
+      let mouseOverColor = "purple";
+      let mouseLeftColor = "black";
 
-        // Get the list of all h1 elements.
-        let allHeaders = document.querySelectorAll("h1");
+      // Get the list of all h1 elements.
+      let allHeaders = document.querySelectorAll("h1");
 
-        // Set each to have a onmouseover listener which calls the changeColor function
-        // similar for onmouseout
-        for (let h = 0; h < allHeaders.length; h++) 
-        {
-            // when mouse is over the header change the color
-            allHeaders[h].onmouseover = changeColor;
+      // Set each to have a onmouseover listener which calls the changeColor function
+      // similar for onmouseout
+      for (let h = 0; h < allHeaders.length; h++) {
+        // when mouse is over the header change the color
+        allHeaders[h].onmouseover = changeColor;
 
-            // when mouse is not on the header, retain original color
-            allHeaders[h].onmouseout = revertColor;
+        // when mouse is not on the header, retain original color
+        allHeaders[h].onmouseout = revertColor;
+      }
+
+      // For every header, change the color
+      function changeColor() {
+        for (let h = 0; h < allHeaders.length; h++) {
+          allHeaders[h].style.color = mouseOverColor;
+          allHeaders[h].style.fontStyle = "oblique";
         }
+      }
 
-        // For every header, change the color
-        function changeColor() {
-            for (let h = 0; h < allHeaders.length; h++) 
-            {
-                allHeaders[h].style.color = mouseOverColor;
-                allHeaders[h].style.fontStyle = "oblique";
-            }
+      // Same as previous function, but restore original
+      function revertColor() {
+        for (let h = 0; h < allHeaders.length; h++) {
+          allHeaders[h].style.color = mouseLeftColor;
+          allHeaders[h].style.fontStyle = "normal";
         }
-
-        // Same as previous function, but restore original
-        function revertColor() {
-            for (let h = 0; h < allHeaders.length; h++) 
-            {
-                allHeaders[h].style.color = mouseLeftColor;
-                allHeaders[h].style.fontStyle = "normal";
-            }
-        }
+      }
     </script>
-</body>
-
+  </body>
 </html>
