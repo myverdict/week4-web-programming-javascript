@@ -1,96 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Animal Guesser</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <h1>Animal Guesser</h1>
 
     <form>
-        Enter number of legs your animal has:
-        <input type="number" name="legs" id="legs">
+      Enter number of legs your animal has:
+      <input type="number" name="legs" id="legs" />
 
-        <!-- JS function called as value to onclick attribute -->
-        <button type="button" onclick="guess()">Let computer guess the animal</button>
+      <!-- JS function called as value to onclick attribute -->
+      <button type="button" onclick="guess()">
+        Let computer guess the animal
+      </button>
     </form>
 
     <p id="computer_guess"></p>
 
-
     <script>
-        // function guesses the animal based on number of legs input
-        function guess() {
-            // get the number input value which is received as a string
-            let legsInputString = document.querySelector("#legs").value;
+      // function guesses the animal based on number of legs input
+      function guess() {
+        // get the number input value which is received as a string
+        let legsInputString = document.querySelector("#legs").value;
 
-            // form validation: check if entered number is an integer
-            if (!isInteger(legsInputString)) {
-                // if number is not an integer --> direct the user to enter an integer
-                document.querySelector("#computer_guess").innerHTML = "Type a whole number please";
+        // form validation: check if entered number is an integer
+        if (!isInteger(legsInputString)) {
+          // if number is not an integer --> direct the user to enter an integer
+          document.querySelector("#computer_guess").innerHTML =
+            "Type a whole number please";
 
-                return;         // stop processing
-            }
-
-            // if number is an integer, continue processing from here
-
-            let legs = parseInt(legsInputString, 10);   // convert input string to an int
-            let my_guess = "";                          // intial computer's guess
-
-            if (legs < 0) {
-                my_guess = "I don't think anything has a negative number of legs";
-            }
-            else if (legs % 2 != 0) {
-                my_guess = "An odd number of legs..., are you sure?";
-            }
-            else if (legs == 0) {
-                my_guess = "Is it a snake?";
-            }
-            else if (legs == 2) {
-                my_guess = "A biped animal, such as a human?"
-            }
-            else if (legs == 4) {
-                my_guess = "A quadruped, like a zebra?";
-            }
-            else if (legs == 6) {
-                my_guess = "Probably an insect, like a bee?";
-            }
-            else if (legs == 8) {
-                my_guess = "Probably a spider?";
-            }
-            else if (legs > 8) {
-                my_guess = "More than 8 legs - perhaps a millipede?"
-            }
-            else {
-                my_guess = "No idea?";
-            }
-
-            // print the computer guess
-            document.querySelector("#computer_guess").innerHTML = "Computer thinks... " + my_guess;
+          return; // stop processing
         }
 
-        // function returns true if input number is an integer, else returns false
-        function isInteger(legsString) {
-            // attempt to convert the input string into a float
-            let float = parseFloat(legsString);
+        // if number is an integer, continue processing from here
 
-            // if the input is a number of some kind
-            if (!isNaN(float)) {
-                // check if the number is an integer
-                // Round down to the next integer and check the value doesn't change
-                if (Math.floor(float) === float) {
-                    return true;
-                }
-            }
+        let legs = parseInt(legsInputString, 10); // convert input string to an int
+        let my_guess = ""; // intial computer's guess
 
-            // if input is not a number (alphabets/spl. chars) or not an integer
-            return false;
+        if (legs < 0) {
+          my_guess = "I don't think anything has a negative number of legs";
+        } else if (legs % 2 != 0) {
+          my_guess = "An odd number of legs..., are you sure?";
+        } else if (legs == 0) {
+          my_guess = "Is it a snake?";
+        } else if (legs == 2) {
+          my_guess = "A biped animal, such as a human?";
+        } else if (legs == 4) {
+          my_guess = "A quadruped, like a zebra?";
+        } else if (legs == 6) {
+          my_guess = "Probably an insect, like a bee?";
+        } else if (legs == 8) {
+          my_guess = "Probably a spider?";
+        } else if (legs > 8) {
+          my_guess = "More than 8 legs - perhaps a millipede?";
+        } else {
+          my_guess = "No idea?";
         }
+
+        // print the computer guess
+        document.querySelector("#computer_guess").innerHTML =
+          "Computer thinks... " + my_guess;
+      }
+
+      // function returns true if input number is an integer, else returns false
+      function isInteger(legsString) {
+        // attempt to convert the input string into a float
+        let float = parseFloat(legsString);
+
+        // if the input is a number of some kind
+        if (!isNaN(float)) {
+          // check if the number is an integer
+          // Round down to the next integer and check the value doesn't change
+          if (Math.floor(float) === float) {
+            return true;
+          }
+        }
+
+        // if input is not a number (alphabets/spl. chars) or not an integer
+        return false;
+      }
     </script>
-</body>
-
+  </body>
 </html>
