@@ -1,278 +1,477 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript Introduction</title>
-    <link rel="stylesheet" href="style.css" type="text/css">
-</head>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+  </head>
 
-<body>
+  <body>
     <h1>Week 4 Labs: JavaScript Introduction - Events</h1>
 
-    <hr>
+    <hr />
 
     <ul>
-        <li>
-            <a href="https://myverdict.github.io/week4-web-programming-javascript/template_inline_js.html"
-                target="_blank">Template for JavaScript</a>
-        </li><br>
+      <li>
+        <a
+          href="https://myverdict.github.io/week4-web-programming-javascript/template_inline_js.html"
+          target="_blank"
+        >
+          Template for JavaScript
+        </a>
+      </li>
+      <br />
 
-        <li>
-            JavaScript Basics
+      <li>
+        JavaScript Basics
+        <ul>
+          <li>
+            Variables in JavaScript
             <ul>
-                <li>
-                    Variables in JavaScript
-                    <ul>
-                        <li>
-                            <a href="https://myverdict.github.io/week4-web-programming-javascript/basics-js/variables.js"
-                               target="_blank">Variables</a>: Basics
-                        </li>
-        
-                        <li>
-                            <a href="https://myverdict.github.io/week4-web-programming-javascript/basics-js/variable_type_num.js"
-                               target="_blank">Variables</a>: number type with type coercion
-                        </li>
-                    </ul>
-                </li>
+              <li>
+                <a
+                  href="https://myverdict.github.io/week4-web-programming-javascript/basics-js/variables.js"
+                  target="_blank"
+                >
+                  Variables
+                </a>
+                : Basics
+              </li>
 
-                <li>
-                    <a href="https://myverdict.github.io/week4-web-programming-javascript/basics-js/equality.js"
-                        target="_blank">Equality</a>: double equals (<span class="mono">==</span>) and triple equals (<span class="mono">===</span>)
-                </li>
-
-                <li>
-                    <a href="https://myverdict.github.io/week4-web-programming-javascript/basics-js/select_by_class.html"
-                        target="_blank">Select by class</a>
-                </li>
-
-                <li>
-                    <a href="https://myverdict.github.io/week4-web-programming-javascript/basics-js/animal_guess.html"
-                        target="_blank">JavaScript functions</a>: writing functions
-                </li>
-
-                <li>
-                    <a href="https://myverdict.github.io/week4-web-programming-javascript/basics-js/change_color.html"
-                        target="_blank">JavaScript functions with arguments</a>: <span class="mono">this</span> keyword demonstration
-                </li>
+              <li>
+                <a
+                  href="https://myverdict.github.io/week4-web-programming-javascript/basics-js/variable_type_num.js"
+                  target="_blank"
+                >
+                  Variables
+                </a>
+                : number type with type coercion
+              </li>
             </ul>
-        </li><br>
+          </li>
 
-        <li>
-            Event Listeners in JavaScript
+          <li>
+            <a
+              href="https://myverdict.github.io/week4-web-programming-javascript/basics-js/equality.js"
+              target="_blank"
+            >
+              Equality
+            </a>
+            : double equals (<span class="mono">==</span>) and triple equals
+            (<span class="mono">===</span>)
+          </li>
+
+          <li>
+            <a
+              href="https://myverdict.github.io/week4-web-programming-javascript/basics-js/select_by_class.html"
+              target="_blank"
+            >
+              Select by class
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="https://myverdict.github.io/week4-web-programming-javascript/basics-js/animal_guess.html"
+              target="_blank"
+            >
+              JavaScript functions
+            </a>
+            : writing functions
+          </li>
+
+          <li>
+            <a
+              href="https://myverdict.github.io/week4-web-programming-javascript/basics-js/change_color.html"
+              target="_blank"
+            >
+              JavaScript functions with arguments
+            </a>
+            : <span class="mono">this</span> keyword demonstration
+          </li>
+        </ul>
+      </li>
+      <br />
+
+      <li>
+        Event Listeners in JavaScript
+        <ul>
+          <li>
+            Click events
             <ul>
-                <li>
-                    Click events
-                    <ul>
-                        <li>
-                            <a href="https://myverdict.github.io/week4-web-programming-javascript/event-listeners/button_click.html"
-                                target="_blank">Button Click</a>: simple <span class="mono">click</span> event with alert message
-                        </li>
+              <li>
+                <a
+                  href="https://myverdict.github.io/week4-web-programming-javascript/event-listeners/button_click.html"
+                  target="_blank"
+                >
+                  Button Click
+                </a>
+                : simple <span class="mono">click</span> event with alert message
+              </li>
 
-                        <li>
-                            <a href="https://myverdict.github.io/week4-web-programming-javascript/event-listeners/button_click_change_text.html"
-                                target="_blank">Button Click</a>: <span class="mono">click</span> event with alert message to change innerHTML text
-                        </li>
-                        
-                        <li>
-                            <a href="https://myverdict.github.io/week4-web-programming-javascript/event-listeners/makegreen.html"
-                                target="_blank"><span class="mono">onclick</span> Event</a>: JS function used in HTML element as value to 
-                            an attribute to change text color
-                        </li>
+              <li>
+                <a
+                  href="https://myverdict.github.io/week4-web-programming-javascript/event-listeners/button_click_change_text.html"
+                  target="_blank"
+                >
+                  Button Click
+                </a>
+                : <span class="mono">click</span> event with alert message to change innerHTML text
+              </li>
 
-                        <li>
-                            <a href="https://myverdict.github.io/week4-web-programming-javascript/event-listeners/click_here.html"
-                                target="_blank">Changing innerHTML</a>: <span class="mono">onclick</span> event to change innerHTML text
-                        </li>
-                    </ul>
-                </li>
+              <li>
+                <a
+                  href="https://myverdict.github.io/week4-web-programming-javascript/event-listeners/makegreen.html"
+                  target="_blank"
+                >
+                  <span class="mono">onclick</span> Event
+                </a>
+                : JS function used in HTML element as value to an attribute to change text color
+              </li>
 
-                <li>
-                    Mouse events
-                    <ul>
-                        <li>
-                            <a href="https://myverdict.github.io/week4-web-programming-javascript/event-listeners/button_mouseover.html"
-                                target="_blank">Mouse events</a>: <span class="mono">mouseover</span> event on a button
-                        </li>
-        
-                        <li>
-                            <a href="https://myverdict.github.io/week4-web-programming-javascript/event-listeners/mouse.html"
-                                target="_blank">Mouse events</a>: <span class="mono">mouseover</span> and <span class="mono">mouseout</span> events on text
-                        </li>
-        
-                        <li>
-                            <a href="https://myverdict.github.io/week4-web-programming-javascript/event-listeners/mouse_count.html"
-                                target="_blank">Mouse counts</a>: counting <span class="mono">mouseover</span> events
-                        </li>
-
-                        <li>
-                            <a href="https://myverdict.github.io/week4-web-programming-javascript/event-listeners/makepurple.html"
-                                target="_blank">Mouse events</a>: <span class="mono">onmouseover</span> and <span class="mono">onmouseout</span> events to change text color and font
-                        </li>
-                    </ul>
-                </li>
-                
-                <li>
-                    <a href="https://myverdict.github.io/week4-web-programming-javascript/event-listeners/display_width.html"
-                        target="_blank">Display Screen Width</a>: <span class="mono">resize</span> event
-                </li>
-
-                <li>
-                    <a href="https://myverdict.github.io/week4-web-programming-javascript/event-listeners/keycode.html"
-                        target="_blank">JavaScript Keycode</a>: <span class="mono">keyup</span>, <span class="mono">keydown</span>, 
-                    and <span class="mono">keypress</span> events to identify keycodes
-                </li>
-
-                <li>
-                    <a href="https://myverdict.github.io/week4-web-programming-javascript/event-listeners/event_bubble_capture.html"
-                       target="_blank">Event bubbling vs. Event capturing</a>: This concept is only relevant if you
-                    have a parent element and a child element which both have event listeners.
-                </li>
+              <li>
+                <a
+                  href="https://myverdict.github.io/week4-web-programming-javascript/event-listeners/click_here.html"
+                  target="_blank"
+                >
+                  Changing innerHTML
+                </a>
+                : <span class="mono">onclick</span> event to change innerHTML text
+              </li>
             </ul>
-        </li><br>
+          </li>
 
-        <li>
-            Quiz Game using JavaScript
+          <li>
+            Mouse events
             <ul>
-                <li>
-                    <a href="https://myverdict.github.io/week4-web-programming-javascript/quiz-game/game_v1.html"
-                        target="_blank">Quiz Game V1</a>: displays correct answer
-                </li>
+              <li>
+                <a
+                  href="https://myverdict.github.io/week4-web-programming-javascript/event-listeners/button_mouseover.html"
+                  target="_blank"
+                >
+                  Mouse events
+                </a>
+                : <span class="mono">mouseover</span> event on a button
+              </li>
 
-                <li>
-                    <a href="https://myverdict.github.io/week4-web-programming-javascript/quiz-game/game_v2.html"
-                        target="_blank">Quiz Game V2</a>: changes color of the correct answer button
-                </li>
+              <li>
+                <a
+                  href="https://myverdict.github.io/week4-web-programming-javascript/event-listeners/mouse.html"
+                  target="_blank"
+                >
+                  Mouse events
+                </a>
+                : <span class="mono">mouseover</span> and
+                <span class="mono">mouseout</span> events on text
+              </li>
 
-                <li>
-                    Quiz Game V3: Looping styles
-                    <ul>
-                        <li>
-                            <a href="https://myverdict.github.io/week4-web-programming-javascript/quiz-game/game_v3_functional_loop.html"
-                                target="_blank">Quiz Game V3</a>: with functional looping style
-                        </li>
+              <li>
+                <a
+                  href="https://myverdict.github.io/week4-web-programming-javascript/event-listeners/mouse_count.html"
+                  target="_blank"
+                >
+                  Mouse counts
+                </a>
+                : counting <span class="mono">mouseover</span> events
+              </li>
 
-                        <li>
-                            <a href="https://myverdict.github.io/week4-web-programming-javascript/quiz-game/game_v3_imperative_loop.html"
-                                target="_blank">Quiz Game V3</a>: with imperative looping style
-                        </li>
-                    </ul>
-                </li>
+              <li>
+                <a
+                  href="https://myverdict.github.io/week4-web-programming-javascript/event-listeners/makepurple.html"
+                  target="_blank"
+                >
+                  Mouse events
+                </a>
+                : <span class="mono">onmouseover</span> and
+                <span class="mono">onmouseout</span> events to change text color and font
+              </li>
             </ul>
-        </li><br>
+          </li>
 
-        <li>
-            Forms & Validations using JavaScript
+          <li>
+            <a
+              href="https://myverdict.github.io/week4-web-programming-javascript/event-listeners/display_width.html"
+              target="_blank"
+            >
+              Display Screen Width
+            </a>
+            : <span class="mono">resize</span> event
+          </li>
+
+          <li>
+            <a
+              href="https://myverdict.github.io/week4-web-programming-javascript/event-listeners/keycode.html"
+              target="_blank"
+            >
+              JavaScript Keycode
+            </a>
+            : <span class="mono">keyup</span>,
+            <span class="mono">keydown</span>, and
+            <span class="mono">keypress</span> events to identify keycodes
+          </li>
+
+          <li>
+            <a
+              href="https://myverdict.github.io/week4-web-programming-javascript/event-listeners/event_bubble_capture.html"
+              target="_blank"
+            >
+              Event bubbling vs. Event capturing
+            </a>
+            : This concept is only relevant if you have a parent element and a
+            child element which both have event listeners.
+          </li>
+        </ul>
+      </li>
+      <br />
+
+      <li>
+        Quiz Game using JavaScript
+        <ul>
+          <li>
+            <a
+              href="https://myverdict.github.io/week4-web-programming-javascript/quiz-game/game_v1.html"
+              target="_blank"
+            >
+              Quiz Game V1
+            </a>
+            : displays correct answer
+          </li>
+
+          <li>
+            <a
+              href="https://myverdict.github.io/week4-web-programming-javascript/quiz-game/game_v2.html"
+              target="_blank"
+            >
+              Quiz Game V2
+            </a>
+            : changes color of the correct answer button
+          </li>
+
+          <li>
+            Quiz Game V3: Looping styles
             <ul>
-                <li>
-                    Simple form to enter name
-                    <ul>
-                        <li>
-                            <a href="https://myverdict.github.io/week4-web-programming-javascript/forms-js/enter_name.html"
-                                target="_blank">Enter name form</a>: to display welcome message with <span class="mono">click</span> event
-                        </li>
+              <li>
+                <a
+                  href="https://myverdict.github.io/week4-web-programming-javascript/quiz-game/game_v3_functional_loop.html"
+                  target="_blank"
+                >
+                  Quiz Game V3
+                </a>
+                : with functional looping style
+              </li>
 
-                        <li>
-                            <a href="https://myverdict.github.io/week4-web-programming-javascript/forms-js/enter_name_onclick.html"
-                                target="_blank">Enter name form</a>: to display welcome message with <span class="mono">onclick</span> 
-                            attribute
-                        </li>
-        
-                        <li>
-                            <a href="https://myverdict.github.io/week4-web-programming-javascript/forms-js/enter_name_check_length.html"
-                                target="_blank">Enter name form</a>: that checks input length, clears input box, and displays
-                            welcome message
-                        </li>
-                    </ul>
-                </li>
-
-                <li>
-                    <a href="https://myverdict.github.io/week4-web-programming-javascript/forms-js/enrollment.html"
-                        target="_blank">Credits enrolled form</a>: using conditions
-                </li>
-
-                <li>
-                    Creating lists
-                    <ul>
-                        <li>
-                            <a href="https://myverdict.github.io/week4-web-programming-javascript/forms-js/add_new_element_to_list.html"
-                                target="_blank">Create list</a>: adding a new element to list
-                        </li>
-
-                        <li>
-                            <a href="https://myverdict.github.io/week4-web-programming-javascript/forms-js/create_list.html"
-                                target="_blank">Create list</a>: using form inputs & basic form validations, 
-                            <span class="mono">if</span> condition using the string <span class="mono">length</span> property
-                        </li>
-        
-                        <li>
-                            <a href="https://myverdict.github.io/week4-web-programming-javascript/forms-js/create_list_validations.html"
-                                target="_blank">Create list</a>: more form validations and alternate way of writing the 
-                            <span class="mono">if</span> condition using variables
-                        </li>
-                    </ul>
-                </li>
+              <li>
+                <a
+                  href="https://myverdict.github.io/week4-web-programming-javascript/quiz-game/game_v3_imperative_loop.html"
+                  target="_blank"
+                >
+                  Quiz Game V3
+                </a>
+                : with imperative looping style
+              </li>
             </ul>
-        </li><br>
+          </li>
+        </ul>
+      </li>
+      <br />
 
-        <li>
-            Tabs with JavaScript
+      <li>
+        Forms & Validations using JavaScript
+        <ul>
+          <li>
+            Simple form to enter name
             <ul>
-                <li>
-                    <a href="https://myverdict.github.io/week4-web-programming-javascript/tabs/tabs.html"
-                        target="_blank">Tabbed content</a>
-                </li>
+              <li>
+                <a
+                  href="https://myverdict.github.io/week4-web-programming-javascript/forms-js/enter_name.html"
+                  target="_blank"
+                >
+                  Enter name form
+                </a>
+                : to display welcome message with <span class="mono">click</span> event
+              </li>
 
-                <li>
-                    <a href="https://myverdict.github.io/week4-web-programming-javascript/tabs/tabs_more_content.html"
-                        target="_blank">Tabbed content</a>: more content (images)
-                </li>
+              <li>
+                <a
+                  href="https://myverdict.github.io/week4-web-programming-javascript/forms-js/enter_name_onclick.html"
+                  target="_blank"
+                >
+                  Enter name form
+                </a>
+                : to display welcome message with <span class="mono">onclick</span> attribute
+              </li>
+
+              <li>
+                <a
+                  href="https://myverdict.github.io/week4-web-programming-javascript/forms-js/enter_name_check_length.html"
+                  target="_blank"
+                >
+                  Enter name form
+                </a>
+                : that checks input length, clears input box, and displays welcome message
+              </li>
             </ul>
-        </li><br>
+          </li>
 
-        <li>
-            Student Club Roster: Generating a list of student members for a student club with JavaScript
+          <li>
+            <a
+              href="https://myverdict.github.io/week4-web-programming-javascript/forms-js/enrollment.html"
+              target="_blank"
+            >
+              Credits enrolled form
+            </a>
+            : using conditions
+          </li>
+
+          <li>
+            Creating lists
             <ul>
-                <li>
-                    <a href="https://myverdict.github.io/week4-web-programming-javascript/student-club-roster/starter_file.html"
-                        target="_blank">Starter file</a>
-                </li>
+              <li>
+                <a
+                  href="https://myverdict.github.io/week4-web-programming-javascript/forms-js/add_new_element_to_list.html"
+                  target="_blank"
+                >
+                  Create list
+                </a>
+                : adding a new element to list
+              </li>
 
-                <li>
-                    <a href="https://myverdict.github.io/week4-web-programming-javascript/student-club-roster/roster_v1.html"
-                        target="_blank">Roster V1</a>: This student club roster version shows separate/individual form
-                    validations for each input & counting students in the list
-                </li>
+              <li>
+                <a
+                  href="https://myverdict.github.io/week4-web-programming-javascript/forms-js/create_list.html"
+                  target="_blank"
+                >
+                  Create list
+                </a>
+                : using form inputs & basic form validations,
+                <span class="mono">if</span> condition using the string
+                <span class="mono">length</span> property
+              </li>
 
-                <li>
-                    <a href="https://myverdict.github.io/week4-web-programming-javascript/student-club-roster/roster_v2.html"
-                        target="_blank">Roster V2</a>: This student club roster version shows form validations by
-                    pushing the required field errors onto an array & an alternate method of counting students in the list
-                </li>
-
-                <li>
-                    <a href="https://myverdict.github.io/week4-web-programming-javascript/student-club-roster/roster_v3.html"
-                        target="_blank">Roster V3</a>: Alternate method of counting students in the list using a
-                    function definition and call function
-                </li>
+              <li>
+                <a
+                  href="https://myverdict.github.io/week4-web-programming-javascript/forms-js/create_list_validations.html"
+                  target="_blank"
+                >
+                  Create list
+                </a>
+                : more form validations and alternate way of writing the
+                <span class="mono">if</span> condition using variables
+              </li>
             </ul>
-        </li><br>
+          </li>
+        </ul>
+      </li>
+      <br />
 
-        <li>
-            <a href="https://myverdict.github.io/week4-web-programming-javascript/sounds/sound.html"
-                target="_blank">Sounds with JavaScript</a>: creating <span class="mono">Audio</span> 
-            objects & playing audio
-        </li><br>
+      <li>
+        Tabs with JavaScript
+        <ul>
+          <li>
+            <a
+              href="https://myverdict.github.io/week4-web-programming-javascript/tabs/tabs.html"
+              target="_blank"
+            >
+              Tabbed content
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="https://myverdict.github.io/week4-web-programming-javascript/tabs/tabs_more_content.html"
+              target="_blank"
+            >
+              Tabbed content
+            </a>
+            : more content (images)
+          </li>
+        </ul>
+      </li>
+      <br />
+
+      <li>
+        Student Club Roster: Generating a list of student members for a student club with JavaScript
+        <ul>
+          <li>
+            <a
+              href="https://myverdict.github.io/week4-web-programming-javascript/student-club-roster/starter_file.html"
+              target="_blank"
+            >
+              Starter file
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="https://myverdict.github.io/week4-web-programming-javascript/student-club-roster/roster_v1.html"
+              target="_blank"
+            >
+              Roster V1
+            </a>
+            : This student club roster version shows separate/individual form
+            validations for each input & counting students in the list
+          </li>
+
+          <li>
+            <a
+              href="https://myverdict.github.io/week4-web-programming-javascript/student-club-roster/roster_v2.html"
+              target="_blank"
+            >
+              Roster V2
+            </a>
+            : This student club roster version shows form validations by pushing the required
+            field errors onto an array & an alternate method of counting students in the list
+          </li>
+
+          <li>
+            <a
+              href="https://myverdict.github.io/week4-web-programming-javascript/student-club-roster/roster_v3.html"
+              target="_blank"
+            >
+              Roster V3
+            </a>
+            : Alternate method of counting students in the list using a function
+            definition and call function
+          </li>
+        </ul>
+      </li>
+      <br />
+
+      <li>
+        <a
+          href="https://myverdict.github.io/week4-web-programming-javascript/sounds/sound.html"
+          target="_blank"
+        >
+          Sounds with JavaScript
+        </a>
+        : creating <span class="mono">Audio</span> objects & playing audio
+      </li>
+      <br />
+
+      <li>
+        Also see,
+        <a
+          href="https://github.com/myverdict/ITEC-lab4-assignment"
+          target="_blank"
+        >
+          Lab 4 assignment repository
+        </a>
+      </li>
     </ul>
 
-    <hr>
+    <hr />
 
     <p>
-        ITEC 2560-60: Web Client and Server Programming<br>
-        Minneapolis Community and Technical College (MCTC), Minneapolis, Minnesota<br>
+      <i>
+        ITEC 2560-60: Web Client and Server Programming
+        <br />
+        Minneapolis Community and Technical College (MCTC), Minneapolis, Minnesota
+        <br />
         Prof. Clara James, Fall 2020
+        <br />
+        August 25, 2020 to December 15, 2020 (Tuesdays)
+      </i>
     </p>
-</body>
-
+  </body>
 </html>
