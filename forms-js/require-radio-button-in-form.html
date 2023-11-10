@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>Form: required radio buttons</title>
+  </head>
+
+  <body>
+    <p>
+      Require at least one of the radio buttons in the group. Remember a group is two or more radio buttons with the same name.
+    </p>
+    <p>
+      &lt;form&gt;<br />&nbsp; &lt;p&gt;What type of credit card?&lt;/p&gt;<br />&nbsp;
+      &lt;input type="radio" required name="question" id="visa"&gt; &lt;label
+      for="visa"&gt;Visa&lt;/label&gt;<br />&nbsp; &lt;br&gt;<br />&nbsp;
+      &lt;input type="radio" name="question" id="mc"&gt; &lt;label
+      for="no"&gt;MasterCard&lt;/label&gt;<br />&nbsp; &lt;br&gt;<br />&nbsp;
+      &lt;input type="radio" name="question" id="amex"&gt; &lt;label
+      for="no"&gt;American Express&lt;/label&gt;<br />&nbsp; &lt;br&gt;<br />&nbsp;&nbsp;&lt;input
+      type="submit"&gt;<br />&lt;/form&gt;
+    </p>
+
+    <form>
+      <!-- Require at least one of the radio buttons in the group. Remember a group is two or more radio buttons with the same name. -->
+      <p>What type of credit card?</p>
+      <input type="radio" required name="question" id="visa" />
+      <label for="visa">Visa</label>
+      <br />
+      <input type="radio" name="question" id="mc" />
+      <label for="mc">MasterCard</label>
+      <br />
+      <input type="radio" name="question" id="amex" />
+      <label for="amex">American Express</label>
+      <br />
+      <input type="submit" />
+    </form>
+  </body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <title>Form: radio button</title>
+  </head>
+  <body>
+    <p>
+      Require at least one of the radio buttons in the group.
+      Remember a group is two or more radio buttons with the same name.
+
+      <p>What type of credit card?</p>
+
+      <form>
+        <input type="radio" required name="question" id="visa">
+        <label for="visa">Visa</label>
+
+        <input type="radio" name="question" id="amex">
+        <label for="no">American Express</label>
+
+        <input type="submit">
+      </form>
+    </p>
+  </body>
+</html> -->
